@@ -25,7 +25,7 @@ app.post('/user', (req, res) => {
   const { body } = req;
   console.log(body);
   users.push(body);
-  res.send('추가 성공');
+  res.send(`id:${body.id} name:${body.name} 추가 성공`);
 });
 
 // 3000 포트로 서버 오픈
