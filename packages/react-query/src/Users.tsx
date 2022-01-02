@@ -23,6 +23,7 @@ const Users = () => {
   // Query
   const { isLoading, data, isError } = useQuery('users', getUserWithAxios, {
     staleTime: 5000,
+    suspense: false,
   });
 
   const mutation = useMutation((data: User) => axios.post('http://localhost:8000/user', data), {
